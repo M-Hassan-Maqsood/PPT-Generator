@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AI Slide Generator</title>
+
+    <!-- Office JavaScript API -->
+    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
+
+    <!-- Fluent UI CSS -->
+    <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/11.0.0/css/fabric.min.css"/>
+
+    <!-- Custom CSS -->
+    <link href="taskpane.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        /* Hide font options by default */
+        .font-options {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <main id="app-body">
+        <div id="content">
+            <h1>PPT Generator</h1>
+            <div id="responseContainer"></div>
+            <input id="textInput" placeholder="Enter your topic here..." type="text"></input>
+            <input id="slideInput" placeholder="Slides...." type="text"></input>
+
+            <!-- Select Option -->
+            <div>
+                <label for="optionSelect">Select Option:</label>
+                <select id="optionSelect" class="ms-Dropdown">
+                    <option value="">--Select--</option>
+                    <option value="title">Title</option>
+                    <option value="subtitle">Subtitle</option>
+                    <option value="text">Text</option>
+                </select>
+            </div>
+
+            <!-- Title Font Size and Style -->
+            <div id="titleOptions" class="font-options">
+                <div>
+                    <label for="titleFontSizeSelect">Title Font Size:</label>
+                    <select id="titleFontSizeSelect" class="ms-Dropdown">
+                        <option value="28">28</option>
+                        <option value="32">32</option>
+                        <option value="36">36</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="titleFontStyleSelect">Title Font Style:</label>
+                    <select id="titleFontStyleSelect" class="ms-Dropdown">
+                        <option value="Arial">Arial</option>
+        <option value="Calibri">Calibri</option>
+        <option value="Times New Roman">Times New Roman</option>
+        <option value="Helvetica">Helvetica</option>
+        <option value="Georgia">Georgia</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Subtitle Font Size and Style -->
+            <div id="subtitleOptions" class="font-options">
+                <div>
+                    <label for="subtitleFontSizeSelect">Subtitle Font Size:</label>
+                    <select id="subtitleFontSizeSelect" class="ms-Dropdown">
+                        <option value="24">24</option>
+                        <option value="28">28</option>
+                        <option value="32">32</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="subtitleFontStyleSelect">Subtitle Font Style:</label>
+                    <select id="subtitleFontStyleSelect" class="ms-Dropdown">
+                        <option value="Arial">Arial</option>
+        <option value="Calibri">Calibri</option>
+        <option value="Times New Roman">Times New Roman</option>
+        <option value="Helvetica">Helvetica</option>
+        <option value="Georgia">Georgia</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Other Text Font Size and Style -->
+            <div id="textOptions" class="font-options">
+                <div>
+                    <label for="otherTextFontSizeSelect">Other Text Font Size:</label>
+                    <select id="otherTextFontSizeSelect" class="ms-Dropdown">
+                        <option value="20">20</option>
+                        <option value="24">24</option>
+                        <option value="28">28</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="otherTextFontStyleSelect">Other Text Font Style:</label>
+                    <select id="otherTextFontStyleSelect" class="ms-Dropdown">
+                        <option value="Arial">Arial</option>
+        <option value="Calibri">Calibri</option>
+        <option value="Times New Roman">Times New Roman</option>
+        <option value="Helvetica">Helvetica</option>
+        <option value="Georgia">Georgia</option>
+                    </select>
+                </div>
+            </div>
+            
+            <button id="generateButton" class="ms-Button">Generate</button>
+            <button id="insertButton" style="display:none;" class="ms-Button">Insert</button>
+            <!-- Status message container -->
+            <div id="statusMessage"></div>
+        </div>
+    </main>
+</body>
+</html>

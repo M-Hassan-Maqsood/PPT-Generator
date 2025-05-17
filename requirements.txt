@@ -1,0 +1,27 @@
+# PowerPoint Slide Generator Add-in Dependencies
+# This file lists the main dependencies needed for this project
+# Note: This is a Node.js project that normally uses package.json instead of requirements.txt
+
+# Main Dependencies
+@google/generative-ai==0.19.0  # Google Generative AI SDK for slide content generation
+core-js==3.36.0               # JavaScript polyfills for modern features
+regenerator-runtime==0.14.1   # Runtime for transpiled generator and async functions
+
+# Dev Dependencies (listed for reference)
+# @babel/core==7.24.0          # Core Babel compiler
+# @babel/preset-env==7.12.11   # Babel preset for environment compatibility
+# webpack==5.90.3              # Module bundler
+# webpack-cli==5.1.4           # Command line interface for Webpack
+# webpack-dev-server==5.0.3    # Development server for hot reloading
+# office-addin-debugging==5.1.4 # Office Add-in debugging tools
+# office-addin-dev-certs==1.13.3 # Certificate generation for HTTPS development
+# office-addin-manifest==1.13.4 # Manifest validation tools
+
+# Installation Instructions:
+# This is a Node.js project, so use:
+# npm install     # To install all dependencies listed in package.json
+
+# System Requirements:
+# - Node.js (recommended: latest LTS version)
+# - npm (comes with Node.js)
+# - Microsoft Office (PowerPoint Desktop)
